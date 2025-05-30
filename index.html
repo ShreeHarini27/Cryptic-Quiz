@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Escape Room Game</title>
+    <link rel="stylesheet" href="sham.css">
+</head>
+<body>
+    <div class="background">
+        <div class="puzzle-item" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="puzzle-item" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="puzzle-item" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="puzzle-item" style="left: 70%; animation-delay: 6s;"></div>
+        <div class="puzzle-item" style="left: 90%; animation-delay: 8s;"></div>
+    </div>
+
+    <div class="game-container">
+        <h1>Escape the Room!</h1>
+        <div id="game-timer">Time Left: <span id="time">200</span> seconds</div>
+
+        <div id="puzzle-1" class="puzzle">
+            <h2>Decode the Lock</h2>
+            <p>Find the code. Clue: "The answer is hidden in plain sight."</p>
+            <input type="text" id="lock-code" placeholder="Enter code">
+            <button onclick="checkCode()">Submit</button>
+        </div>
+
+        <div id="puzzle-2" class="puzzle hidden">
+            <h2>Solve the Riddle</h2>
+            <p>What has keys but can't open locks?</p>
+            <input type="text" id="riddle-answer" placeholder="Your answer">
+            <button onclick="checkRiddle()">Submit</button>
+        </div>
+
+        <div id="puzzle-3" class="puzzle hidden">
+            <h2>Find the Hidden Number</h2>
+            <p>Spot the hidden number below:</p>
+            <div class="hidden-number">
+                <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=7" alt="Hidden Number">
+            </div>
+            <input type="text" id="final-answer" placeholder="Enter the number">
+            <button onclick="checkFinal()">Submit</button>
+        </div>
+
+        <div id="game-complete" class="hidden">
+            <h2>Congratulations! You've Escaped!</h2>
+            <p>Great job using your problem-solving skills!</p>
+        </div>
+
+        <div id="notification" class="notification hidden">
+            <h2 id="notification-message"></h2>
+            <button onclick="closeNotification()">Close</button>
+        </div>
+    </div>
+
+    <script src="sha.m.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

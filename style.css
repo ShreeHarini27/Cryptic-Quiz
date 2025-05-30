@@ -1,0 +1,94 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #282c34, #1a1d21);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.puzzle-item {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: fall 10s linear infinite, rotate 15s linear infinite, scale 8s ease-in-out infinite;
+}
+
+@keyframes fall {
+  0% { top: -50px; }
+  100% { top: 100vh; }
+}
+
+.game-container {
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+  background: rgba(51, 51, 51, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.puzzle {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #ff8566;
+  transform: scale(1.05);
+}
+
+input {
+  padding: 8px;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#game-timer {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
